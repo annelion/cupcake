@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cupcakes</title>
+
+        <!--Alla script som behövs, jquery, script.js är till för funktioner i designen-->
+		<script src="javascript/jquery/jquery-1.8.3.js"></script>
+		<script src="javascript/jquery/jquery-ui-1.9.2.js"></script>
+		<script src="javascript/isascript.js"></script>
+		<script src="javascript/script.js"></script>
+		<script src="javascript/description.js"></script>
+		<script src="javascript/bestallning.js"></script>
+		<script src="javascript/Klick.js"></script>
+
+        <!--css-filer-->
+		<link href="isastyle.css" type="text/css" rel="stylesheet" />
+		<link href="cupcakedisplay.css" type="text/css" rel="stylesheet" />
+		<link href="cupcakemaker.css" type="text/css" rel="stylesheet" />
+
+	</head>
+
+		<body>
+        <!--Header med menylänkar-->
+			<div id="header">
+ 				<!--Loggan-->
+				 <img src="img/logga.PNG" id="logga" /> 
+				<!-- -->
+
+				<!--Tillbaka till startsida-->
+				<div id="home" class="meny">
+					<img src="img/hem.PNG"/> 
+				</div>
+				<!-- -->
+				
+				<!--Beställ-->
+				 <div id="design" class="meny">
+
+				 	<img src="img/cupcakemaker.PNG" id="cupcakemaker"/> 
+				 	
+				 </div>
+				<!-- -->
+				 
+				
+				 
+				 <!--Om oss-->
+				 <div id="aboutus" class="meny">
+				 	<img src="img/omoss.PNG"/>  
+				 </div>	
+				<!-- -->
+
+				<!--Kontaktinfo-->
+				<div id="contact" class="meny">
+					<img src="img/kontakt.PNG"/>
+				</div>
+				<!-- -->
+
+			</div>
+		<!-- -->
+
+		<!--Linjen av frosting under headern-->
+			<div id="cream">
+			</div>
+		<!-- -->
+
+		<!--Startsidan-->
+			<div class="article" id="homepage">
+			
+			<div class="left">
+				<img src="img/cupcakes1.PNG" />
+				<p>
+					När du är klar med dina cupcakes så guidar vi dig till beställningen, där du kan välja antal och upphämtning.
+				</p>
+			</div>
+
+			<div class="right">
+				<img src="img/cupcakes2.PNG" />
+				<p>
+					Ett knapptryck senare så är våra duktiga bagare i full gång och dina cupcakes finns att hämta hos oss redan nästa vecka!
+				</p>
+			</div>
+
+			<div  id="intro">
+				<img src="img/rubrik/rubrik_startsida.PNG" id="rubrik">
+							<p>På <span class="blue">ElsaBakery</span> erbjuder vi en helt unik 
+				funktion för dig som är kreativ. I vår cupcake-maker kan du designa egna cupcakes med 
+				stora valmöjligheter! </p>
+
+				<img src="img/designshortcut.PNG" id="shortcut">
+
+			</div>
+			
+
+				<!--Clear-div för att .article ska sträckas ut med innehållet trots att allt innehåll är float:at-->
+				<div class="clear"></div>
+
+			</div>
+		<!-- -->
+
+
+		<!--Designsidan, display: none-->
+			<div class="article" id="cupcakepage">
+
+			<div id="cupcakechoices">
+			<img src="img/text/cupcake_choices.PNG" id="cc_title_left"><br/>
+			<div class="cupcakemeny">
+				<div class="choose" id="wrapklick">Form</div>
+				<div class="choose" id="muffinklick">Muffins</div>
+				<div class="choose" id="frostingklick">Frosting</div>
+				<div class="choose" id="topfrostklick">Extra frosting</div>
+				<div class="choose" id="decoklick">Dekoration</div>
+				<div class="choose" id="strosselklick">Strössel</div>
+			</div>
+
+		<!--<Annelis kod>-->
+			<div id="wrapval">
+				<table style="text-align: center;" class="choices">
+					<tr>
+						<td id="wrapbrun">
+							<img src="img/preview/wbrun.PNG" class="preview"><br/>
+							Brun
+						</td>			
+						<td id="wraprosa">				
+							<img src="img/preview/wrosa.PNG" class="preview"><br/>
+							Rosa
+						</td>
+						<td id="wraplila">			
+							<img src="img/preview/wlila.PNG" class="preview"><br/>
+							Lila
+						</td>
+						<td id="wrapred">				
+							<img src="img/preview/wrod.PNG" class="preview"><br/>
+							Röd
+						</td>
+						<td id="wrapvit">			
+							<img src="img/preview/wvit.PNG" class="preview"><br/>
+							Vit
+						</td>
+						<td id="wrapbla">				
+							<img src="img/preview/wbla.PNG" class="preview"><br/>
+							Ljusblå
+						</td>
+					</tr>
+					<tr>
+						<td id="wrapgul">			
+							<img src="img/preview/wgul.PNG" class="preview"><br/>
+							Gul
+						</td>
+						<td id="wrapgron">			
+							<img src="img/preview/wgron.PNG" class="preview"><br/>
+							Ljusgrön
+						</td>
+						<td id="wrappattern">			
+							<img src="img/preview/wpattern.PNG" class="preview"><br/>
+							Mönster
+						</td>
+						<td id="wrapredhearts">			
+							<img src="img/preview/wredhearts.PNG" class="preview"><br/>
+							Röda hjärtan
+						</td>
+						<td id="wraphearts">			
+							<img src="img/preview/whearts.PNG" class="preview"><br/>
+							Hjärtan
+						</td>
+						<td id="wrapgold">			
+							<img src="img/preview/wgold.PNG" class="preview"><br/>
+							Svart & Guld
+						</td>
+					</tr>
+				</table>
+
+				<p class="note" id="wrapnote">	
+					Börja med att välja en form till din cupcake. Du kan när som helst gå tillbaka och ändra dina val!
+				</p>
+			</div>
+
+			<div id="muffinval">
+				<table style="text-align: center;" class="choices">
+					<tr>
+						<td id="choklad">
+							<img src="img/preview/mchoklad.PNG" class="preview"><br/>
+							Choklad
+						</td>
+						<td id="banan">
+							<img src="img/preview/mbanan.PNG" class="preview"><br/>
+							Banan
+						</td>
+						<td id="morot">	
+							<img src="img/preview/mmorot.PNG" class="preview"><br/>
+							Morot
+						</td>						
+						<td id="cherry">
+							<img src="img/preview/mkorsbar.PNG" class="preview"><br/>
+							Körsbär
+						</td>
+						<td id="vanilj">
+							<img src="img/preview/mvanilj.PNG" class="preview"><br/>
+							Vanilj
+						</td>
+						<td id="mandel">
+							<img src="img/preview/mmandel.PNG" class="preview"><br/>
+							Mandel
+						</td>
+					</tr>
+					<tr>
+						<td id="apple">	 
+							<img src="img/preview/mappel.PNG" class="preview"><br/>
+							Äpple
+						</td>
+						<td id="blue">			
+							<img src="img/preview/mblabar.PNG" class="preview"><br/>
+							Blåbär
+						</td>
+						<td id="red">
+							<img src="img/preview/mredvelvet.PNG" class="preview"><br/>
+							Red<br/> Velvet
+						</td>
+						<td id="chip">
+							<img src="img/preview/mchokladchip.PNG" class="preview"><br/>
+							Choklad<br/>chip
+						</td>
+						<td id="kaffe">
+							<img src="img/preview/mkaffe.PNG" class="preview"><br/>
+							Kaffe & <br/>choklad
+						</td>
+						<td id="jordgubb">			
+							<img src="img/preview/mjordgubb.PNG" class="preview"><br/>
+							Jordgubb
+					 	</td>
+					 </tr>
+				</table>
+				<p class="note" id="muffinnote">	
+				När du har valt en muffin kan du gå vidare till att välja frosting!
+				</p>
+				<p id="ingredientsMuffin"></p>
+			</div>
+
+			<div id="frostingval">
+				<table style="text-align: center;"  class="choices">
+					<tr>
+						<td id="frostingchoklad">
+							<img src="img/preview/fchoklad.PNG" class="preview"><br/>
+							Choklad
+						</td>
+						<td id="frostingblueberry">
+							<img src="img/preview/fblabar.PNG" class="preview"><br/>
+							Blåbär
+						</td>
+						<td id="frostingbanana">
+							<img src="img/preview/fbanan.PNG" class="preview"><br/>
+							Banan
+						</td>
+						<td id="frostingcream">	
+							<img src="img/preview/fgradde.PNG" class="preview"><br/>
+							Grädde
+						</td>
+						<td id="frostingpolka">
+							<img src="img/preview/fpolkagris.PNG" class="preview"><br/>
+							Polkagris
+						</td>
+						<td id="frostingmeri">
+							<img src="img/preview/marang.PNG" class="preview"><br/>
+							Maräng
+						</td>
+					</tr>
+					<tr>
+						<td id="frostingrain">		
+							<img src="img/preview/fregnbage.PNG" class="preview"><br/>
+							Regnbåge
+						</td>
+						<td id="frostingstraw">
+							<img src="img/preview/fjordgubb.PNG" class="preview"><br/>
+							Jordgubb
+						</td>
+						<td id="frostingkanel">
+							<img src="img/preview/fkanel.PNG" class="preview"><br/>
+							Kanel
+						</td>
+						<td id="frostingmaple">	
+							<img src="img/preview/flonnsirap.PNG" class="preview"><br/>
+							Lönnsirap
+						</td>
+						<td id="frostingwhite">	
+							<img src="img/preview/fvitchoklad.PNG" class="preview"><br/>
+							Vit choklad
+						</td>
+						<td id="frostinggreentea">	
+							<img src="img/preview/fgrontte.PNG" class="preview"><br/>
+							Grönt té
+						</td>
+					</tr>
+					<tr>
+						<td id="frostingcookiedough">	
+							<img src="img/preview/fkakdeg.PNG" class="preview"><br/>
+							Kakdeg
+						</td>
+						<td id="frostinghazelnut">	
+							<img src="img/preview/fhasselnot.PNG" class="preview"><br/>
+							Hasselnöt
+						</td>
+					</tr>	
+				</table>
+
+				<p id="ingredientsFrosting">
+				När du har valt en frosting kan du också välja ett extra lager med frosting, en dekoration och strössel till din cupcake.<br/></p>
+			</div>			
+
+			<div id="topfrostval">
+				<table style="text-align: center;" class="choices">
+					<tr>
+						<td id="topfrostchoklad">
+							<img src="img/preview/fchoklad.PNG" class="preview"><br/>
+							Choklad
+						</td>
+						<td id="topfrostblueberry">
+							<img src="img/preview/fblabar.PNG" class="preview"><br/>
+							Blåbär
+						</td>
+						<td id="topfrostbanana">
+							<img src="img/preview/fbanan.PNG" class="preview"><br/>
+							Banan
+						</td>
+						<td id="topfrostcream">	
+							<img src="img/preview/fgradde.PNG" class="preview"><br/>
+							Grädde
+						</td>
+						<td id="topfrostpolka">
+							<img src="img/preview/fpolkagris.PNG" class="preview"><br/>
+							Polkagris
+						</td>
+						<td id="topfrostmeri">
+							<img src="img/preview/marang.PNG" class="preview"><br/>
+							Maräng
+						</td>
+					</tr>
+					<tr>
+						<td id="topfrostrain">		
+							<img src="img/preview/fregnbage.PNG" class="preview"><br/>
+							Regnbåge
+						</td>
+						<td id="topfroststraw">
+							<img src="img/preview/fjordgubb.PNG" class="preview"><br/>
+							Jordgubb
+						</td>
+						<td id="topfrostkanel">
+							<img src="img/preview/fkanel.PNG" class="preview"><br/>
+							Kanel
+						</td>
+						<td id="topfrostmaple">	
+							<img src="img/preview/flonnsirap.PNG" class="preview"><br/>
+							Lönnsirap
+						</td>
+						<td id="topfrostwhite">	
+							<img src="img/preview/fvitchoklad.PNG" class="preview"><br/>
+							Vit choklad
+						</td>
+						<td id="topfrostgreentea">	
+							<img src="img/preview/fgrontte.PNG" class="preview"><br/>
+							Grönt té
+						</td>
+					</tr>
+					<tr>
+						<td id="topfrostcookiedough">	
+							<img src="img/preview/fkakdeg.PNG" class="preview"><br/>
+							Kakdeg
+						</td>
+						<td id="topfrosthasselnot">	
+							<img src="img/preview/fhasselnot.PNG" class="preview"><br/>
+							Hasselnöt
+						</td>
+						<td id="ingentopfrost">			
+							<img src="img/x.PNG" class="preview"><br/>
+							Ta bort
+						</td>
+					</tr>
+				</table>
+				<p id="ingredientsTopfrost"></p>
+			</div>					
+
+			<div id="strosselval">
+				<table style="text-align: center;" class="choices">
+					<tr>
+						<td id="strosselchoklad">
+							<img src="img/preview/schocolate.PNG" class="preview"><br/>
+							Choklad
+						</td>
+						<td id="strosselhearts">
+								<img src="img/preview/shjartan.PNG" class="preview"><br/>
+							Hjärtan
+						</td>
+						<td id="strosselrain">		
+							<img src="img/preview/srainbow.PNG" class="preview"><br/>
+							Regnbåge
+						</td>
+						<td id="strosselmarsh">		
+							<img src="img/preview/smarshmallows.PNG" class="preview"><br/>
+							Marshmallows
+						</td>
+
+						<td id="strosselriven">		
+							<img src="img/preview/sriven.PNG" class="preview"><br/>
+							Riven choklad
+						</td>
+
+						<td id="strosseldaim">		
+							<img src="img/preview/sdaim.PNG" class="preview"><br/>
+							Krossad daim
+						</td>
+					</tr>
+					<tr>
+						<td id="strossellakrits">		
+							<img src="img/preview/slicorice.PNG" class="preview"><br/>
+							Lakrits
+						</td>
+						<td id="strosselchip">		
+							<img src="img/preview/schocolatechip.PNG" class="preview"><br/>
+							Chokladchip
+						</td>
+						<td id="ingenstrossel">		
+							<img src="img/x.PNG" class="preview"><br/>
+							Ta bort
+						</td>	
+					</tr>
+				</table>
+				<p id="ingredientsStrossel"></p>
+			</div>
+
+			<div id="decoval">
+				<table style="text-align: center;" class="choices">
+					<tr>
+						<td id="decocherry">
+							<img src="img/preview/dkorsbar.PNG" class="preview"><br/>
+							Körsbär
+						</td>
+						<td id="decocrack">
+							<img src="img/preview/dcracker.PNG" class="preview"><br/>
+							Graham-kex
+						</td>
+						<td id="decomarang">
+							<img src="img/preview/dmarang.PNG" class="preview"><br/>
+							Maräng
+						</td>
+						<td id="decoredrose">
+							<img src="img/preview/drodros.PNG" class="preview"><br/>
+							Röd ros
+						</td>
+						<td id="decopinkrose">	
+							<img src="img/preview/drosaros.PNG" class="preview"><br/>
+							Rosa ros
+						</td>
+						<td id="decostraw">	
+							<img src="img/preview/djordgubb.PNG" class="preview"><br/>
+							Jordgubbe
+						</td>
+					</tr>
+					<tr>
+						<td id="decostraws">
+							<img src="img/preview/dstraw.PNG" class="preview"><br/>
+							Polkastång
+						</td>
+						<td id="decoblack">
+							<img src="img/preview/dbjornbar.PNG" class="preview"><br/>
+							Björnbär
+						</td>
+						<td id="decomaltes">
+							<img src="img/preview/dmalteser.PNG" class="preview"><br/>
+							Malteser
+						</td>
+						<td id="decooreo">		
+							<img src="img/preview/doreo.PNG" class="preview"><br/>
+							Oreo
+						</td>
+						<td id="decoreese">
+							<img src="img/preview/dreeses.PNG" class="preview"><br/>
+							Reese's
+						</td>
+						<td id="decoviol">
+							<img src="img/preview/dviol.PNG" class="preview"><br/>
+							Viol
+						</td>
+					</tr>
+					<tr>
+
+						<td id="decobanan">
+							<img src="img/preview/dbanan.PNG" class="preview"><br/>
+							Banan
+						</td>
+						<td id="decohearts">
+							<img src="img/preview/dhjartan.PNG" class="preview"><br/>
+							Chokladhjärtan
+						</td>
+						<td id="decowafer">
+							<img src="img/preview/dchokladkex.PNG" class="preview"><br/>
+							Chokladkex
+						</td>
+						<td id="ingendeco">			
+							<img src="img/x.PNG" class="preview"><br/>
+							Ta bort
+						</td>	
+					</tr>
+				</table>
+				<p id="ingredientsDeco"></p>	
+			</div>
+		<!--</Annelis kod>-->
+			
+			</div>
+
+
+			
+			<div id="pristabell">
+				<img src="img/text/dincupcake.PNG" id="cc_title_right"><br/>
+				<div class="cupcakemeny">
+				<div class="choose">
+				Pris per Cupcake
+				</div>
+			</div>
+					<table class="varukorg">
+						<tr>
+							<td>
+								<img src="img/text/form.PNG">
+							</td>
+							<td class="wrapsort">
+							</td>
+							<td class="wrappris">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/text/muffin.PNG">
+							</td>
+							<td class="muffinsort">
+							</td>
+							<td class="muffinpris">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/text/frosting.PNG">
+							</td>
+							<td class="frostingsort">
+							</td>
+							<td class="frostpris">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/text/extrafrosting.PNG">
+							</td>
+							<td class="topfrostsort">
+							</td>
+							<td class="topfrostpris">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/text/strossel.PNG">
+							</td>
+							<td class="strosselsort">
+							</td>
+							<td class="strosselpris">
+							</td>
+						</tr>
+						<tr>
+						<td>
+								<img src="img/text/dekoration.PNG">
+						</td>
+							<td class="decosort">
+							</td>
+						<td class="decopris">
+						</td>
+						</tr>
+						<tr>
+						<td colspan="3">
+						<br/>	
+						</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<img src="img/text/totalt.PNG">
+							</td>
+							<td class="totalt">
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			
+					<div id="cupcakedisplay">
+						<div id="cupcake">
+							<div class="muffin">
+							</div>
+							<div class="frosting">
+							</div>
+							<div class="strossel">
+							</div>
+							<div class="deco">
+							</div>
+							<div class="wrapper">
+							</div>
+							<div class="topfrost">
+							</div>			
+						</div>
+						<br/>
+					</div>
+
+				<div class="clear"></div>
+			</div>
+		<!-- -->
+
+
+
+
+
+		<!--Om oss-page, display: none, samma upplägg som på förra-->
+			<div class="article" id="aboutpage">
+				
+			<div class="left">
+				<img src="img/omoss_left.PNG" />
+				<p class="note">
+					Vi satsar på snabb, god service och värdesätter dialogen mellan oss och våra kunder.
+				</p>
+			</div>
+			<div class="right">
+							<img src="img/omoss_right.PNG" />
+				<p class="note">
+					Vi bakar våra cupcakes med stor omsorg och väljer alltid de bästa råvarorna till din unika produkt.
+				</p>
+						</div>
+			<div id="intro">
+					<img src="img/rubrik/rubrik_omoss.PNG" id="rubrik">
+						<p>På <span class="brown">ElsaBakery</span> 
+						har vi endast anställda med lång erfarenhet bakom sig. Våra bagare jobbar snabbt och effektivt men med stor precision och vi är 100% säkra på att vi kan erbjuda precis vad du behöver!</p>
+
+				<img src="img/slogan.PNG" class="slogan">
+
+			</div>
+				
+				<div class="clear"></div>
+
+			</div>
+		<!-- -->
+
+		<!--Kontaktinfo, display: none-->
+			<div class="article" id="contactpage">
+				
+				<div class="left">
+				<img src="img/mail.PNG" />
+				<p>
+					Mail: support@elsabakery.se
+				</p>
+			</div>
+			<div class="right">
+							<img src="img/phone.PNG" />
+							<p>
+								Telefon: 0454-654232 
+							</p>
+						</div>
+			<div id="intro">
+<img src="img/rubrik/rubrik_startsida.PNG" id="rubrik">
+						<p>Vi gör vårt bästa för att Du ska ha en god kontakt med oss. Vid frågor kan du kontakta oss via mail, telefon, eller vår Facebook.</p>
+
+			<img src="img/facebook.PNG" id="facebook">
+
+			</div>
+						
+
+			<div class="clear"></div>
+
+		</div>
+		<!-- -->
+
+
+
+		<!--Footer med adress-->
+		<div id="footer">
+
+			<img src="img/kontaktinfo.PNG" />
+
+		</div>
+		<!-- -->
+
+		</body>
+	</html>

@@ -1,0 +1,252 @@
+ 
+/* //////////////////////////<Isa>////////////////////////// */
+
+/* /////////////////<Använda färger>/////////////////////// */
+
+ /* Beige: 		#f2edd8 */
+/* 	Ljusbeige:  #fdfcf9	*/
+/* 	Brun:  		#4c351b	*/
+/* 	Mörkbrun:  	#32271c	*/
+/* 	Ljusblå:  	#5fa7da	*/
+
+/* /////////////////////////////////////////////////////// */
+
+	body {
+			background: #fdfaed url(img/background.JPG) center center no-repeat;
+			background-size: 100vw; 
+			margin: 0;
+			height: 100vh;
+			font-family: calibri;
+			font-size: 1.09vw;
+			line-height: 1.6vw;
+		}
+
+	/*Sidans header */
+	#header {
+			background: url(img/vertikal.JPG) no-repeat;
+			background-size: 100vw; 
+			width: 100%;
+			height: 7vw;
+			text-align: center;
+		}
+
+	/* Cream är linjen av frosting som går under headern */
+	#cream {
+			background: url(img/cream.PNG) repeat-x;
+			background-size: 10.4vw; 
+			width: 100%;
+			height: 2vw;
+			position: absolute;
+			top: 6vw;
+		}
+
+	/* ElsaBakery's logga, måste ha högt z-index för att inte bli övertäckt när sidorna slide:ar upp */
+	#logga {
+			z-index: 10;
+			position: relative;
+			width: 15%;
+			cursor:pointer;
+		}
+
+
+	/* Article innehåller de olika sidornas content */
+	.article {
+			background: white;
+			width: 90%;
+			margin: 2vw auto 0vw auto;
+			padding: 1.5vw;
+			border: 1px solid #f2edd8;
+	}
+
+	/* Div:en till höger*/
+	.right {
+		float: right;
+		width: 23.4vw;
+		margin-right: 1.5vw;
+		margin-bottom: 4vw;
+		font-size: 1.4vw;
+		font-family: Goudy Old Style;
+		font-style: italic;
+		text-align: center;
+		color: #4c351b;
+	}
+
+	/* Styr storleken & styling på bilden till höger */
+	.right img {
+		width: 23.6vw;
+		border: 0.2vw solid #f2edd8;
+		padding: 0.4vw;
+	}
+
+
+	/* Div:en till vänster*/
+	.left, .left_order {
+		float: left;
+		width: 25.4vw;
+		margin-bottom: 4vw;
+		font-size: 1.4vw;
+		font-family: Goudy Old Style;
+		font-style: italic;
+		text-align: center;
+		color: #4c351b;
+	}
+
+	/* Styr storleken & styling på bilden till vänster */
+	.left img {
+		width: 23.6vw;
+		border: 0.2vw solid #f2edd8;
+		padding: 0.4vw;
+	}
+
+
+
+	/* Styr storleken & styling på bilden till vänster */
+	.left_order img {
+		width: 23.6vw;
+		border: 0;
+		padding: 0.4vw;
+	}
+
+	/* Diven i mitten */
+	#intro {
+		background: url(img/paper.PNG) #fdfcf9;
+		height: 15vw;
+		width: 29.4vw;
+		margin: 0vw auto 4vw auto;
+		padding: 1.2%;
+		border: 0.4vw double #f2edd8;
+		font-size: 1.4vw;
+		font-family: Goudy Old Style;
+		font-style: italic;
+		text-align: center;
+		color: #4c351b;
+	}
+
+	/* Diven i mittens rubriker */
+	#rubrik {
+		border: 0vw;
+		width: 24.6vw;
+	}
+
+	/* "Börja designa nu"-knappen */
+	#shortcut {
+		border: 0vw;
+		width: 11.6vw;
+		cursor:pointer;
+		padding: 0%;
+	}
+
+
+	/* Sloganbild */
+	.slogan {
+		border: 0vw;
+		width: 11.6vw;
+		padding: 0%;
+	}
+	/* Facebook-bilden */
+	#facebook {
+		border: 0vw;
+		width: 24.6vw;
+		cursor:pointer;
+		margin-top: 1vw;
+	}
+
+	/* Fixar så att jag kan ha både float left och right och ändå få sidans höjd att sträcka sig efter innehållet. Placerar denna längst ner i .article */
+	.clear {clear: both;}
+
+	/* De sidor som inte är #homepage är display: none från början */
+	#aboutpage, #cupcakepage, #orderpage,  #contactpage {
+			display: none;	
+	}
+
+	/* Footer med kontaktinfo */
+	#footer {
+			z-index: 5;
+			background-color: #32271c;
+			width: 91vw;
+			margin: 0 auto 0 auto;
+			padding: 0.5vw 2vw 0vw 0;
+			text-align: right;
+		}
+
+	/* Styr storleken på bilderna i #footer */
+	#footer img {
+			width: 20vw;
+		}
+
+	/* Ingen underline på eventuella länkar! */
+	a {
+		text-decoration: none;
+	}
+
+	/* Grundstyle för knapparna i menyn */
+	.meny {
+		position: absolute;
+		width: 17%;
+		top: 1.5vw; 
+		 z-index: 1; 
+		cursor:pointer;
+	}
+
+	/* right left-styling för de individuella knapparna i menyn */
+	#home 		{ 
+		left: 10%;
+	}
+	
+	#design 	{ 
+		left: 25%; 
+	}
+
+	#aboutus	{ 
+		right: 25%;
+	}
+
+	#contact 	{ 
+		right: 10%;
+	}
+
+	/* Styr storleken på bilderna i meny */
+	.meny img {
+			width: 67%;
+	}
+
+	.preview {
+		cursor: pointer;
+	}
+
+
+/* ////////////////<Textstyling CSS>///////////////////// */
+
+	/* Rubrik */
+	h1 {
+			color:  #4c351b;
+			font-size: 1.7vw;
+			font-family: Goudy Old Style;
+			text-align: center;
+			font-weight: normal;
+			font-style: italic;
+			padding: 0vw;
+			margin: 0vw; 
+	}
+
+	/* Tycker default p-tagg är för stor, så minskar margin-top lite */
+	p { 
+		margin-top: 0vw; margin-bottom: 1vw;
+	}
+
+	/* Blå accent-tagg för text */
+	.blue {
+		color: #5fa7da;
+	}
+
+	/* Hjälptext */
+	.note {
+		font-size: 1.3vw;
+		color: #4c351b;
+		font-family: Goudy Old Style;
+		text-align: center;
+		padding: 0.3vw;
+		margin: 1vw auto;
+		width: 20vw;
+		font-style: italic;
+	}

@@ -1,0 +1,115 @@
+
+/* ///////////////<Cupcakemaker-sidans CSS>//////////////////// */
+
+#ingredientsMuffin, #ingredientsFrosting, #ingredientsTopfrost, #ingredientsDeco, #ingredientsStrossel {text-align: center; padding-top: 2vw; font-size: 1vw;}
+
+
+	/* Diven som den designade cupcaken placeras i */
+	#cupcakedisplay {
+		margin: -1vw auto 1vw auto;
+		width: 18.7vw;
+	}
+
+	/* CupcakeMaker-rubriken */
+	#cc_title_left {
+		width: 14vw;
+		margin: 0vw 7vw 1vw 7vw;
+	}
+
+	/* Diven med de olika valen för cupcakes */
+	#cupcakechoices {
+		float: left;
+		width: 30vw;
+	}
+
+	/* Holder för knapparna där man väljer muffin, frosting, form osv */
+	.cupcakemeny {
+		background: url(img/texture.PNG);
+		width: 30vw;
+		height: 3vw;
+		border: 0.2vw double #372713;
+		margin-top: -0.3vw;
+	}
+
+	/* Styling för knapparna där man väljer muffin, frosting, form osv*/
+	.choose {
+		height: 3vw;
+		padding: 0vw 0.86vw;
+		float: left;
+		background: url(img/texture.PNG);
+		color: white;
+		font-size: 0.9vw;
+		text-align: center;
+		line-height: 3vw;
+		cursor:pointer;
+	}
+
+	/* Styling för Form-knappen, den enda som är blå från början */
+	#wrapklick {
+		background: url(img/bluetexture.PNG);
+	}
+
+	/* Tabellen med de olika valen */
+	.choices {
+		border: 0.2vw solid #f2edd8;
+		width: 30.4vw;
+		padding-bottom: 0.9vw;
+		margin-right: -2vw;
+		background: url(img/paper.PNG) #fdfcf9;
+	}
+
+	/* td-styling för choices-tabellen */
+	.choices td {
+		min-width: 4.2vw;
+		height: 3vw;
+		font-size: 0.9vw;
+		line-height: 1.2vw;
+		padding: 0.8vw 0vw 0vw 0vw;
+		vertical-align: top;
+	}
+
+	/* Ger bilderna i tabellen rätt storlek */
+	.choices img {
+		width: 3vw;
+		height: 3vw;
+	}
+
+	/* Diven med det uträknade priset */
+	#pristabell {
+		float: right;
+		width: 30vw;
+	}
+
+	/* DinCupcake-rubriken */
+	#cc_title_right {
+		width: 12.3vw;
+		margin: 0vw 9vw 1vw 9vw;
+	}
+
+	/* Styling för Beställ-knappen */
+	#bestall {
+		width: 11vw;
+		float: right;
+		margin-top: 1vw;
+		margin-right: 2vw;
+	}
+
+	/* Pristabellen */
+	.varukorg {
+		border: 0.2vw solid #f2edd8;
+		width: 30.4vw;
+		padding: 1vw;
+		background: url(img/paper.PNG) #fdfcf9;
+	}
+
+	/* td-styling för pristabellen */
+	.varukorg td {
+		width: 22vw;
+		font-size: 1.1vw;
+	    text-transform: capitalize;
+	}
+
+	/* Ger bilderna i pristabellen rätt storlek */
+	.varukorg td img{
+		width: 6.4vw;
+	}
